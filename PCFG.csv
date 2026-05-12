@@ -1,0 +1,222 @@
+# Core rules,,,,
+1,ROOT,S <EOS>,2,root
+1,S,NP_a VP,2,nsubj
+10,VP,V_i,1,_
+20,VP,V_t NP_a,1,dobj
+4,VP,V_c CP,1,ccomp
+4,VP,V_p PP,1,obl
+4,VP,V_to VP_to,1,xcomp
+10,VP_bare,V_i_bare,1,_
+20,VP_bare,V_t_bare NP_a,1,dobj
+4,VP_bare,V_c_bare CP,1,ccomp
+4,VP_bare,V_p_bare PP,1,obl
+4,VP_bare,V_to_bare VP,1,xcomp
+1,VP_to,to VP_bare,2,case
+4,VP,VP PP,1,obl
+5,NP_a,D NN_a,2,det
+5,NP_a,PN_a,1,_
+5,NP_i,D NN_i,2,det
+5,NP_i,PN_i,1,_
+1,PP,P NP_i,2,case
+1,CP,C S,2,mark
+1,NN_a,A NN_a,2,amod
+1,NN_a,NN_a PP,1,nmod
+5,NN_a,N_a,1,_
+1,NN_i,A NN_i,2,amod
+1,NN_i,NN_i PP,1,nmod
+5,NN_i,N_i,1,_
+# Punctuation rules,,,,
+0.2,S,S PUNC,1,punc
+0.2,S,[ S ],2,punc punc
+0.2,VP,[ VP ],2,punc punc
+0.2,NP_a,[ NP_a ],2,punc punc
+0.2,NP_i,[ NP_i ],2,punc punc
+0.2,PP,[ PP ],2,punc punc
+0.2,NN_a,[ NN_a ],2,punc punc
+0.2,NN_i,[ NN_i ],2,punc punc
+0.2,PN_a,[ PN_a ],2,punc punc
+0.2,PN_i,[ PN_i ],2,punc punc
+0.2,CP,[ CP ],2,punc punc
+0.2,V_t,[ V_t ],2,punc punc
+0.2,V_i,[ V_i ],2,punc punc
+0.2,V_c,[ V_c ],2,punc punc
+0.2,V_p,[ V_p ],2,punc punc
+0.2,V_to,[ V_to ],2,punc punc
+0.2,P,[ P ],2,punc punc
+0.2,N_a,[ N_a ],2,punc punc
+0.2,N_i,[ N_i ],2,punc punc
+0.2,D,[ D ],2,punc punc
+0.2,C,[ C ],2,punc punc
+0.2,Aux,[ Aux ],2,punc punc
+# Conjunction rules,,,,
+0.1,S,S CC S,1,cc conj
+0.1,VP,VP CC VP,1,cc conj
+0.1,NP_a,NP_a CC NP_a,1,cc conj
+0.1,NP_i,NP_i CC NP_i,1,cc conj
+0.1,PP,PP CC PP,1,cc conj
+0.1,NN_a,NN_a CC NN_a,1,cc conj
+0.1,NN_i,NN_i CC NN_i,1,cc conj
+0.1,PN_a,PN_a CC PN_a,1,cc conj
+0.1,PN_i,PN_i CC PN_i,1,cc conj
+0.1,CP,CP CC CP,1,cc conj
+0.1,V_t,V_t CC V_t,1,cc conj
+0.1,V_i,V_i CC V_i,1,cc conj
+0.1,V_c,V_c CC V_c,1,cc conj
+0.1,V_p,V_p CC V_p,1,cc conj
+0.1,V_to,V_to CC V_to,1,cc conj
+0.1,P,P CC P,1,cc conj
+0.1,N_a,N_a CC N_a,1,cc conj
+0.1,N_i,N_i CC N_i,1,cc conj
+0.1,D,D CC D,1,cc conj
+0.1,C,C CC C,1,cc conj
+0.1,Aux,Aux CC Aux,1,cc conj
+# conjugate verbs,,,,
+1,V_t,V_t_bare SUF,1,infl
+1,V_i,V_i_bare SUF,1,infl
+1,V_c,V_c_bare SUF,1,infl
+1,V_p,V_p_bare SUF,1,infl
+1,V_to,V_to_bare SUF,1,infl
+1,V_t,Aux V_t_bare,2,aux
+1,V_i,Aux V_i_bare,2,aux
+1,V_c,Aux V_c_bare,2,aux
+1,V_p,Aux V_p_bare,2,aux
+1,V_to,Aux V_to_bare,2,aux
+# Terminals,,,,
+1,V_i_bare,sleep,0,_
+1,V_i_bare,sneeze,0,_
+1,V_i_bare,sparkle,0,_
+1,V_i_bare,appear,0,_
+1,V_i_bare,succeed,0,_
+1,V_i_bare,win,0,_
+1,V_i_bare,arrive,0,_
+1,V_i_bare,depart,0,_
+1,V_i_bare,relax,0,_
+1,V_i_bare,dance,0,_
+1,V_t_bare,greet,0,_
+1,V_t_bare,see,0,_
+1,V_t_bare,hug,0,_
+1,V_t_bare,admire,0,_
+1,V_t_bare,praise,0,_
+1,V_t_bare,cure,0,_
+1,V_t_bare,embrace,0,_
+1,V_t_bare,help,0,_
+1,V_t_bare,support,0,_
+1,V_t_bare,hire,0,_
+1,V_c_bare,think,0,_
+1,V_c_bare,know,0,_
+1,V_c_bare,say,0,_
+1,V_c_bare,realize,0,_
+1,V_c_bare,imagine,0,_
+1,V_c_bare,believe,0,_
+1,V_c_bare,learn,0,_
+1,V_c_bare,notice,0,_
+1,V_c_bare,claim,0,_
+1,V_c_bare,suggest,0,_
+1,V_p_bare,walk,0,_
+1,V_p_bare,fly,0,_
+1,V_p_bare,roll,0,_
+1,V_p_bare,skip,0,_
+1,V_p_bare,swim,0,_
+1,V_p_bare,soar,0,_
+1,V_p_bare,hop,0,_
+1,V_p_bare,run,0,_
+1,V_p_bare,stroll,0,_
+1,V_to_bare,want,0,_
+1,V_to_bare,try,0,_
+1,V_to_bare,need,0,_
+1,V_to_bare,like,0,_
+1,V_to_bare,continue,0,_
+1,V_to_bare,attempt,0,_
+1,V_to_bare,intend,0,_
+1,V_to_bare,manage,0,_
+1,V_to_bare,plan,0,_
+1,P,to,0,_
+1,P,in,0,_
+1,P,on,0,_
+1,P,over,0,_
+1,P,near,0,_
+1,P,above,0,_
+1,P,below,0,_
+1,P,around,0,_
+1,P,inside,0,_
+1,P,outside,0,_
+5,D,the,0,_
+1,D,this,0,_
+1,D,a,0,_
+1,D,every,0,_
+1,D,some,0,_
+1,D,no,0,_
+1,D,my,0,_
+1,D,her,0,_
+1,C,that,0,_
+1,A,lovely,0,_
+1,A,happy,0,_
+1,A,smart,0,_
+1,A,wonderful,0,_
+1,A,marvelous,0,_
+1,A,fantastic,0,_
+1,A,amazing,0,_
+1,A,cheerful,0,_
+1,A,brilliant,0,_
+1,A,excellent,0,_
+1,N_a,unicorn,0,_
+1,N_a,zebra,0,_
+1,N_a,puppy,0,_
+1,N_a,teacher,0,_
+1,N_a,student,0,_
+1,N_a,kitten,0,_
+1,N_a,doctor,0,_
+1,N_a,pilot,0,_
+1,N_a,astronaut,0,_
+1,N_a,giraffe,0,_
+1,N_a,princess,0,_
+1,N_a,mother,0,_
+1,N_a,child,0,_
+1,N_a,baby,0,_
+1,N_a,grandmother,0,_
+1,N_i,tree,0,_
+1,N_i,park,0,_
+1,N_i,forest,0,_
+1,N_i,planet,0,_
+1,N_i,star,0,_
+1,N_i,lake,0,_
+1,N_i,river,0,_
+1,N_i,galaxy,0,_
+1,N_i,school,0,_
+1,N_i,museum,0,_
+1,Aux,should,0,_
+1,Aux,can,0,_
+1,Aux,must,0,_
+1,Aux,might,0,_
+1,Aux,could,0,_
+1,Aux,would,0,_
+1,Aux,will,0,_
+1,Aux,may,0,_
+1,Aux,shall,0,_
+1,PN_a,Buddy,0,_
+1,PN_a,Galileo,0,_
+1,PN_a,Newton,0,_
+1,PN_a,Meitner,0,_
+1,PN_a,Chico,0,_
+1,PN_a,Beyonce,0,_
+1,PN_a,Garfunkel,0,_
+1,PN_a,Garfield,0,_
+1,PN_a,Picasso,0,_
+1,PN_a,Cleopatra,0,_
+1,PN_i,San-Diego,0,_
+1,PN_i,the-Louvre,0,_
+1,PN_i,Spain,0,_
+1,PN_i,Pluto,0,_
+1,PN_i,Shanghai,0,_
+1,PN_i,Tokyo,0,_
+1,PN_i,Mexico,0,_
+1,PN_i,UCSD,0,_
+1,PN_i,Jupiter,0,_
+1,PN_i,Kilimanjaro,0,_
+1,CC,and,0,_
+1,CC ,or,0,_
+1,SUF,-ed,0,_
+1,SUF,-s,0,_
+1,PUNC,.,0,_
+1,PUNC,!,0,_
+1,PUNC,?,0,_
